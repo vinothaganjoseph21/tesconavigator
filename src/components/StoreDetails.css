@@ -1,0 +1,117 @@
+.store-details-horizontal {
+    display: flex;
+    gap: 30px; 
+  }
+  
+  .opening-hours-section {
+    flex: 0 0 250px; 
+    background-color: #f8f8f8; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+  
+  .other-details-section {
+    flex: 1 1 auto; 
+    padding: 20px;
+    background-color: #ffffff; 
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+  
+  .store-details-horizontal h2 {
+    color: #E4002B; 
+    margin-top: 0;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+  
+  .store-details-horizontal .address,
+  .store-details-horizontal .postcode {
+    color: #555; 
+    margin-bottom: 8px;
+  }
+  
+  .store-details-horizontal .section {
+    margin-bottom: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee; 
+  }
+  
+  .store-details-horizontal .section:first-of-type {
+      border-top: none; 
+      padding-top: 0;
+  }
+  
+  
+  .store-details-horizontal .section h3 {
+    color: #00539F; 
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+  }
+  
+  .store-details-horizontal .section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .store-details-horizontal .section ul li {
+    margin-bottom: 5px;
+    line-height: 1.4;
+  }
+  
+  .store-details-horizontal .section strong {
+    font-weight: bold;
+  }
+  
+  .store-details-horizontal .section a {
+    color: #007bff; 
+    text-decoration: none;
+  }
+  
+  .store-details-horizontal .section a:hover {
+    text-decoration: underline;
+  }
+  
+  .store-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+  
+
+  @media (max-width: 768px) {
+    .store-details-horizontal {
+      flex-direction: column; 
+      gap: 15px;
+    }
+  
+    .opening-hours-section {
+      width: auto; 
+      flex: none; 
+    }
+  }
+
+  .initial-details-message {
+    padding: 40px;
+    text-align: center;
+    color: #555;
+    font-size: 1.2em;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+  }
+  
+  .initial-details-message p {
+      margin-bottom: 10px;
+      line-height: 1.5;
+  }

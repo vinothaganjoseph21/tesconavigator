@@ -1,0 +1,280 @@
+[
+  {
+    "id": 1,
+    "name": "Tesco Metro Kensington",
+    "address": "120 High Street Kensington, London, W8 7RL",
+    "postcode": "W8 7RL",
+    "latitude": 51.5000,
+    "longitude": -0.1900,
+    "imageUrl": "https://via.placeholder.com/400x200?text=Tesco+Kensington",
+    "openingHours": {
+      "Monday": "07:00 - 23:00",
+      "Tuesday": "07:00 - 23:00",
+      "Wednesday": "07:00 - 23:00",
+      "Thursday": "07:00 - 23:00",
+      "Friday": "07:00 - 23:00",
+      "Saturday": "07:00 - 22:00",
+      "Sunday": "08:00 - 22:00"
+    },
+    "contact": {
+      "phone": "0345 678 9012",
+      "website": "https://www.tesco.com/store-locator/london/120-high-street-kensington"
+    },
+    "services": [
+      "Pharmacy",
+      "Click & Collect",
+      "Cashpoint/ATM"
+    ],
+    "accessibility": [
+      "Wheelchair access",
+      "Disabled parking"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Tesco Superstore Osterley",
+    "address": "Sycamore Farm, Osterley, Isleworth, TW7 4PU",
+    "postcode": "TW7 4PU",
+    "latitude": 51.4800,
+    "longitude": -0.3300,
+    "imageUrl": "https://via.placeholder.com/400x200?text=Tesco+Osterley",
+    "openingHours": {
+      "Monday": "06:00 - 24:00",
+      "Tuesday": "06:00 - 24:00",
+      "Wednesday": "06:00 - 24:00",
+      "Thursday": "06:00 - 24:00",
+      "Friday": "06:00 - 24:00",
+      "Saturday": "06:00 - 23:00",
+      "Sunday": "10:00 - 16:00"
+    },
+    "contact": {
+      "phone": "0345 075 0863",
+      "website": "https://www.tesco.com/store-locator/isleworth/sycamore-farm"
+    },
+    "services": [
+      "Petrol Station",
+      "Pharmacy",
+      "Opticians",
+      "Click & Collect",
+      "Photo Printing",
+      "Cafe",
+      "EV Charging Points",
+      "Cashpoint/ATM"
+    ],
+    "accessibility": [
+      "Wheelchair access",
+      "Disabled parking",
+      "Hearing loop"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Tesco Extra Slough",
+    "address": "Wrexham Rd, Slough Trading Estate, Slough, SL1 4XF",
+    "postcode": "SL1 4XF",
+    "latitude": 51.5280,
+    "longitude": -0.5950,
+    "imageUrl": "https://via.placeholder.com/400x200?text=Tesco+Slough",
+    "openingHours": {
+      "Monday": "00:00 - 24:00",
+      "Tuesday": "00:00 - 24:00",
+      "Wednesday": "00:00 - 24:00",
+      "Thursday": "00:00 - 24:00",
+      "Friday": "00:00 - 24:00",
+      "Saturday": "00:00 - 24:00",
+      "Sunday": "10:00 - 16:00"
+    },
+    "contact": {
+      "phone": "0345 610 2715",
+      "website": "https://www.tesco.com/store-locator/slough/wrexham-rd"
+    },
+    "services": [
+      "Petrol Station",
+      "Pharmacy",
+      "Opticians",
+      "Click & Collect",
+      "Photo Printing",
+      "Cafe",
+      "EV Charging Points",
+      "Cashpoint/ATM",
+      "Customer Service Desk"
+    ],
+    "accessibility": [
+      "Wheelchair access",
+      "Disabled parking",
+      "Hearing loop",
+      "Assistance dogs welcome"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Tesco Superstore Twickenham",
+    "address": "Oriel Rd, Twickenham, TW2 7BG",
+    "postcode": "TW2 7BG",
+    "latitude": 51.4490,
+    "longitude": -0.3370,
+    "imageUrl": "https://via.placeholder.com/400x200?text=Tesco+Twickenham",
+    "openingHours": {
+      "Monday": "07:00 - 23:00",
+      "Tuesday": "07:00 - 23:00",
+      "Wednesday": "07:00 - 23:00",
+      "Thursday": "07:00 - 23:00",
+      "Friday": "07:00 - 23:00",
+      "Saturday": "07:00 - 22:00",
+      "Sunday": "10:00 - 16:00"
+    },
+    "contact": {
+      "phone": "0345 075 0871",
+      "website": "https://www.tesco.com/store-locator/twickenham/oriel-rd"
+    },
+    "services": [
+        "Pharmacy",
+        "Click & Collect",
+        "Cashpoint/ATM",
+        "Recycling facilities"
+      ],
+      "accessibility": [
+        "Wheelchair access",
+        "Disabled parking"
+      ]
+  },
+  {
+    "id": 5,
+    "name": "Tesco Express Barnet (EN5 3AW Area)",
+    "address": "123 High St, Barnet, EN5 5XX",
+    "postcode": "EN5 5XX",
+    "latitude": 51.6500,
+    "longitude": -0.1970,
+    "imageUrl": "https://via.placeholder.com/400x200?text=Tesco+Barnet+Express",
+    "openingHours": {
+      "Monday": "06:00 - 23:00",
+      "Tuesday": "06:00 - 23:00",
+      "Wednesday": "06:00 - 23:00",
+      "Thursday": "06:00 - 23:00",
+      "Friday": "06:00 - 23:00",
+      "Saturday": "06:00 - 23:00",
+      "Sunday": "07:00 - 22:00"
+    },
+    "contact": {
+      "phone": "0345 678 9013"
+    },
+    "services": ["Cashpoint/ATM"],
+    "accessibility": []
+  },
+  {
+    "id": 6,
+    "name": "Tesco Superstore Hatfield (AL10 9AB Area)",
+    "address": "The Galleria, Comet Way, Hatfield, AL10 0XR",
+    "postcode": "AL10 0XR",
+    "latitude": 51.7670,
+    "longitude": -0.2360,
+    "imageUrl": "https://via.placeholder.com/400x200?text=Tesco+Hatfield+Superstore",
+    "openingHours": {
+      "Monday": "06:00 - 24:00",
+      "Tuesday": "06:00 - 24:00",
+      "Wednesday": "06:00 - 24:00",
+      "Thursday": "06:00 - 24:00",
+      "Friday": "06:00 - 24:00",
+      "Saturday": "06:00 - 23:00",
+      "Sunday": "10:00 - 16:00"
+    },
+    "contact": {
+      "phone": "0345 075 0864",
+      "website": "https://www.tesco.com/store-locator/hatfield/the-galleria"
+    },
+    "services": ["Petrol Station", "Click & Collect", "Pharmacy"],
+    "accessibility": ["Wheelchair access"]
+  },
+  {
+    "id": 7,
+    "name": "Tesco Express Whetstone (EN5 3AW Area)",
+    "address": "High Road, Whetstone, N20 9AS",
+    "postcode": "N20 9AS",
+    "latitude": 51.6370,
+    "longitude": -0.1600,
+    "imageUrl": "https://via.placeholder.com/400x200?text=Tesco+Whetstone+Express",
+    "openingHours": {
+      "Monday": "06:00 - 23:00",
+      "Tuesday": "06:00 - 23:00",
+      "Wednesday": "06:00 - 23:00",
+      "Thursday": "06:00 - 23:00",
+      "Friday": "06:00 - 23:00",
+      "Saturday": "06:00 - 23:00",
+      "Sunday": "07:00 - 22:00"
+    },
+    "contact": {
+      "phone": "0345 678 9014"
+    },
+    "services": ["Cashpoint/ATM"],
+    "accessibility": []
+  },
+  {
+    "id": 8,
+    "name": "Tesco Express South Mimms (AL10 9AB Area)",
+    "address": "St Albans Rd, South Mimms, EN6 3LJ",
+    "postcode": "EN6 3LJ",
+    "latitude": 51.6930,
+    "longitude": -0.2070,
+    "imageUrl": "https://via.placeholder.com/400x200?text=Tesco+South+Mimms+Express",
+    "openingHours": {
+      "Monday": "06:00 - 24:00",
+      "Tuesday": "06:00 - 24:00",
+      "Wednesday": "06:00 - 24:00",
+      "Thursday": "06:00 - 24:00",
+      "Friday": "06:00 - 24:00",
+      "Saturday": "06:00 - 23:00",
+      "Sunday": "07:00 - 22:00"
+    },
+    "contact": {
+      "phone": "0345 075 0865"
+    },
+    "services": ["Petrol Station", "Cashpoint/ATM"],
+    "accessibility": ["Wheelchair access"]
+  },
+  {
+    "id": 9,
+    "name": "Tesco Express Potters Bar (EN5 3AW Area)",
+    "address": "High Street, Potters Bar, EN6 5XX",
+    "postcode": "EN6 5XX",
+    "latitude": 51.6850,
+    "longitude": -0.1900,
+    "imageUrl": "https://via.placeholder.com/400x200?text=Tesco+Potters+Bar+Express",
+    "openingHours": {
+      "Monday": "06:00 - 23:00",
+      "Tuesday": "06:00 - 23:00",
+      "Wednesday": "06:00 - 23:00",
+      "Thursday": "06:00 - 23:00",
+      "Friday": "06:00 - 23:00",
+      "Saturday": "06:00 - 23:00",
+      "Sunday": "07:00 - 22:00"
+    },
+    "contact": {
+      "phone": "0345 678 9015"
+    },
+    "services": ["Cashpoint/ATM"],
+    "accessibility": []
+  },
+  {
+    "id": 10,
+    "name": "Tesco Express St Albans (AL10 9AB Area)",
+    "address": "London Road, St Albans, AL1 1LU",
+    "postcode": "AL1 1LU",
+    "latitude": 51.7500,
+    "longitude": -0.3390,
+    "imageUrl": "https://via.placeholder.com/400x200?text=Tesco+St+Albans+Express",
+    "openingHours": {
+      "Monday": "06:00 - 23:00",
+      "Tuesday": "06:00 - 23:00",
+      "Wednesday": "06:00 - 23:00",
+      "Thursday": "06:00 - 23:00",
+      "Friday": "06:00 - 23:00",
+      "Saturday": "06:00 - 23:00",
+      "Sunday": "07:00 - 22:00"
+    },
+    "contact": {
+      "phone": "0345 075 0866"
+    },
+    "services": ["Cashpoint/ATM"],
+    "accessibility": []
+  }
+]
