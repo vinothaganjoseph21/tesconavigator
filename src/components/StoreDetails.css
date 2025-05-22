@@ -1,4 +1,4 @@
-.store-details-horizontal {
+  .store-details-horizontal {
     display: flex;
     gap: 30px; 
   }
@@ -51,14 +51,25 @@
     font-size: 1.2em;
   }
   
-  .store-details-horizontal .section ul {
-    list-style: none;
+  .store-details-horizontal .section dl {
+    list-style: none; 
     padding: 0;
+    margin: 0;
   }
   
-  .store-details-horizontal .section ul li {
-    margin-bottom: 5px;
-    line-height: 1.4;
+  .store-details-horizontal .section dt {
+    display: inline-block; 
+    width: 90px; 
+    font-weight: bold;
+    margin-bottom: 5px; 
+    vertical-align: top; 
+  }
+  
+  .store-details-horizontal .section dd {
+    display: inline-block; 
+    margin-left: 10px; 
+    margin-bottom: 5px; 
+    vertical-align: top; 
   }
   
   .store-details-horizontal .section strong {

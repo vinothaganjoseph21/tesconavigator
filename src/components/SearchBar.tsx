@@ -18,14 +18,25 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
   };
 
   return (
-    <div className="search-bar">
+    <div className="search-bar" role="search">
+      {" "}
+      <label htmlFor="postcode-search" className="sr-only">
+        Enter postcode
+      </label>{" "}
       <input
         type="text"
+        id="postcode-search"
         placeholder="Enter postcode"
         value={postcode}
         onChange={handleInputChange}
+        aria-label="Enter postcode for store search"
       />
-      <button onClick={handleSearchClick}>Search</button>
+      <button
+        onClick={handleSearchClick}
+        aria-label="Search stores by postcode"
+      >
+        Search
+      </button>{" "}
     </div>
   );
 };

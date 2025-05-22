@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import StoreLocatorMap from "./components/StoreLocatorMap";
 import SearchBar from "./components/SearchBar";
 import StoreDetails from "./components/StoreDetails";
@@ -55,9 +55,13 @@ function App() {
   const [filteredStores, setFilteredStores] = useState<Store[]>([]);
   const [searchError, setSearchError] = useState<string | null>(null);
   const [selectedStore, setSelectedStore] = useState<Store | null>(null);
+  const [lastSearchedPostcode, setLastSearchedPostcode] = useState<
+    string | null
+  >(null);
 
   const handlePostcodeSearch = (postcode: string) => {
     const standardizedPostcode = postcode.replace(/\s/g, "").toUpperCase();
+    setLastSearchedPostcode(postcode);
 
     if (referencePostcodes[standardizedPostcode]) {
       const searchCoords = referencePostcodes[standardizedPostcode];
@@ -110,20 +114,33 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1>Tesco Store Locator</h1>
-      <SearchBar onSearch={handlePostcodeSearch} />
-      {searchError && <p className="error-message">{searchError}</p>}
-      <div className="map-details-container">
-        <div className="map-wrapper">
-          <StoreLocatorMap
-            stores={filteredStores}
-            onMarkerClick={handleMarkerClick}
-            selectedStoreId={selectedStore ? selectedStore.id : null}
-          />
+      <header>
+        <h1>Tesco Store Locator</h1>
+      </header>
+      <main>
+        <SearchBar onSearch={handlePostcodeSearch} />
+        {lastSearchedPostcode && filteredStores.length > 0 && !searchError && (
+          <p className="search-results-message">
+            Showing nearby Tescos for the area and zoom out to view all clearly:{" "}
+            <strong>{lastSearchedPostcode}</strong>
+          </p>
+        )}
+        {searchError && (
+          <p className="error-message" role="alert" aria-live="assertive">
+            {searchError}
+          </p>
+        )}
+        <div className="map-details-container">
+          <div className="map-wrapper">
+            <StoreLocatorMap
+              stores={filteredStores}
+              onMarkerClick={handleMarkerClick}
+              selectedStoreId={selectedStore ? selectedStore.id : null}
+            />
+          </div>
+          <StoreDetails store={selectedStore} />
         </div>
-        <StoreDetails store={selectedStore} />{" "}
-        {/* Details will be empty initially */}
-      </div>
+      </main>
     </div>
   );
 }

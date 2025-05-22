@@ -56,6 +56,12 @@ const StoreLocatorMap: React.FC<StoreLocatorMapProps> = ({
 
   useEffect(() => {
     if (mapRef.current) {
+      const mapElement = mapRef.current.getContainer();
+      if (mapElement) {
+        mapElement.setAttribute("role", "region");
+        mapElement.setAttribute("aria-label", "Tesco Store Locations Map");
+      }
+
       if (stores.length > 0) {
         const latLngs = stores.map((store) =>
           L.latLng(store.latitude, store.longitude)
@@ -98,11 +104,12 @@ const StoreLocatorMap: React.FC<StoreLocatorMapProps> = ({
   return (
     <div className="map-container">
       <div className="layer-selector">
-        <label htmlFor="tileLayer">Map View: </label>
+        <label htmlFor="tileLayer">Map View:</label>{" "}
         <select
           id="tileLayer"
           value={currentTileLayer}
           onChange={handleTileLayerChange}
+          aria-label="Select map tile layer"
         >
           {Object.entries(tileLayers).map(([name, url]) => (
             <option key={name} value={url}>
@@ -132,6 +139,7 @@ const StoreLocatorMap: React.FC<StoreLocatorMapProps> = ({
                 }
               },
             }}
+            title={`Tesco ${store.name}, ${store.address}`}
           >
             <Popup>
               <b>{store.name}</b>

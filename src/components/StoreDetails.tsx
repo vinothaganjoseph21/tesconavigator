@@ -27,7 +27,8 @@ interface StoreDetailsProps {
 const StoreDetails: React.FC<StoreDetailsProps> = ({ store }) => {
   if (!store) {
     return (
-      <div className="initial-details-message">
+      <div className="initial-details-message" role="status" aria-live="polite">
+        {" "}
         <p>Enter a postcode in the search bar to find nearby Tesco stores.</p>
         <p>
           Click on a store marker or select a store from the search results to
@@ -38,39 +39,26 @@ const StoreDetails: React.FC<StoreDetailsProps> = ({ store }) => {
   }
 
   return (
-    <div className="store-details-horizontal">
-      <div className="opening-hours-section">
-        {store.openingHours && (
-          <div className="section">
-            <h3>Opening Hours</h3>
-            <ul>
-              {Object.entries(store.openingHours).map(([day, time]) => (
-                <li key={day}>
-                  <strong>{day}:</strong> {time}
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-      </div>
+    <aside
+      className="store-details-horizontal"
+      aria-labelledby="store-name-heading"
+    >
+      {" "}
+      <h2 id="store-name-heading" className="sr-only">
+        {store.name} Details
+      </h2>{" "}
       <div className="other-details-section">
-        {/* {store.imageUrl && (
-          <img
-            src={store.imageUrl}
-            alt={`Image of ${store.name}`}
-            className="store-image"
-          />
-        )} */}
         <h2>{store.name}</h2>
         <p className="address">{store.address}</p>
         <p className="postcode">{store.postcode}</p>
-
         {store.contact && (
-          <div className="section">
+          <section className="section">
+            {" "}
             <h3>Contact</h3>
             {store.contact.phone && (
               <p>
-                <strong>Phone:</strong> {store.contact.phone}
+                <strong>Phone:</strong>{" "}
+                <a href={`tel:${store.contact.phone}`}>{store.contact.phone}</a>{" "}
               </p>
             )}
             {store.contact.website && (
@@ -80,37 +68,55 @@ const StoreDetails: React.FC<StoreDetailsProps> = ({ store }) => {
                   href={store.contact.website}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`Visit website for ${store.name}`}
                 >
-                  Visit Website
+                  Visit Website{" "}
+                  <span className="sr-only">(opens in new tab)</span>{" "}
                 </a>
               </p>
             )}
-          </div>
+          </section>
         )}
-
         {store.services && store.services.length > 0 && (
-          <div className="section">
+          <section className="section">
             <h3>Services</h3>
             <ul>
               {store.services.map((service, index) => (
                 <li key={index}>{service}</li>
               ))}
             </ul>
-          </div>
+          </section>
         )}
-
         {store.accessibility && store.accessibility.length > 0 && (
-          <div className="section">
+          <section className="section">
             <h3>Accessibility</h3>
             <ul>
               {store.accessibility.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
             </ul>
-          </div>
+          </section>
         )}
       </div>
-    </div>
+      <div className="opening-hours-section">
+        {store.openingHours && (
+          <section className="section">
+            <h3>Opening Hours</h3>
+            <dl>
+              {" "}
+              {Object.entries(store.openingHours).map(([day, time]) => (
+                <React.Fragment key={day}>
+                  <dt>
+                    <strong>{day}:</strong>
+                  </dt>
+                  <dd>{time}</dd>
+                </React.Fragment>
+              ))}
+            </dl>
+          </section>
+        )}
+      </div>
+    </aside>
   );
 };
 

@@ -75,3 +75,27 @@ h1 {
     margin: 10px;
   }
 }
+
+.search-results-message {
+  margin-top: 15px;
+  font-size: 1.1em;
+  color: #00539F; 
+  text-align: center;
+  width: 100%;
+}
+
+.search-results-message strong {
+  color: #E4002B; 
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
