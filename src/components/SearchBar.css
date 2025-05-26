@@ -11,6 +11,8 @@
   
   .search-bar input[type="text"] {
     flex-grow: 1;
+    background-color: white;
+    color: #00539F;
     padding: 12px 15px;
     border: 2px solid #ccc; 
     border-radius: 5px;

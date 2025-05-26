@@ -138,7 +138,10 @@ function App() {
               selectedStoreId={selectedStore ? selectedStore.id : null}
             />
           </div>
-          <StoreDetails store={selectedStore} />
+          <StoreDetails
+            store={selectedStore}
+            originPostcode={lastSearchedPostcode}
+          />
         </div>
       </main>
     </div>

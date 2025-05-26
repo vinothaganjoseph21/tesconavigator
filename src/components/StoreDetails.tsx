@@ -22,13 +22,16 @@ interface Store {
 
 interface StoreDetailsProps {
   store: Store | null;
+  originPostcode: string | null;
 }
 
-const StoreDetails: React.FC<StoreDetailsProps> = ({ store }) => {
+const StoreDetails: React.FC<StoreDetailsProps> = ({
+  store,
+  originPostcode,
+}) => {
   if (!store) {
     return (
       <div className="initial-details-message" role="status" aria-live="polite">
-        {" "}
         <p>Enter a postcode in the search bar to find nearby Tesco stores.</p>
         <p>
           Click on a store marker or select a store from the search results to
@@ -38,22 +41,96 @@ const StoreDetails: React.FC<StoreDetailsProps> = ({ store }) => {
     );
   }
 
+  const getGoogleMapsDirectionsUrl = (
+    destination: string,
+    origin: string | null,
+    travelMode: "driving" | "walking" | "bicycling" | "transit"
+  ) => {
+    let url = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
+      destination
+    )}`;
+    if (origin) {
+      url += `&origin=${encodeURIComponent(origin)}`;
+    }
+    url += `&travelmode=${travelMode}`;
+    return url;
+  };
+
   return (
     <aside
       className="store-details-horizontal"
       aria-labelledby="store-name-heading"
     >
-      {" "}
       <h2 id="store-name-heading" className="sr-only">
         {store.name} Details
-      </h2>{" "}
+      </h2>
       <div className="other-details-section">
         <h2>{store.name}</h2>
         <p className="address">{store.address}</p>
         <p className="postcode">{store.postcode}</p>
+
+        {originPostcode && (
+          <section className="section directions-section">
+            <h3>Directions from {originPostcode}</h3>
+            <div className="directions-options">
+              <a
+                href={getGoogleMapsDirectionsUrl(
+                  store.address,
+                  originPostcode,
+                  "driving"
+                )}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="directions-button"
+                aria-label={`Get driving directions to ${store.name} from ${originPostcode}`}
+              >
+                <i className="fas fa-car"></i> Driving
+              </a>
+              <a
+                href={getGoogleMapsDirectionsUrl(
+                  store.address,
+                  originPostcode,
+                  "transit"
+                )}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="directions-button"
+                aria-label={`Get public transport directions to ${store.name} from ${originPostcode}`}
+              >
+                <i className="fas fa-bus"></i> Public Transport
+              </a>
+              <a
+                href={getGoogleMapsDirectionsUrl(
+                  store.address,
+                  originPostcode,
+                  "walking"
+                )}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="directions-button"
+                aria-label={`Get walking directions to ${store.name} from ${originPostcode}`}
+              >
+                <i className="fas fa-walking"></i> Walking
+              </a>
+              <a
+                href={getGoogleMapsDirectionsUrl(
+                  store.address,
+                  originPostcode,
+                  "bicycling"
+                )}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="directions-button"
+                aria-label={`Get cycling directions to ${store.name} from ${originPostcode}`}
+              >
+                <i className="fas fa-bicycle"></i> Cycling
+              </a>
+            </div>
+          </section>
+        )}
+
         {store.contact && (
           <section className="section">
-            {" "}
             <h3>Contact</h3>
             {store.contact.phone && (
               <p>
@@ -103,7 +180,6 @@ const StoreDetails: React.FC<StoreDetailsProps> = ({ store }) => {
           <section className="section">
             <h3>Opening Hours</h3>
             <dl>
-              {" "}
               {Object.entries(store.openingHours).map(([day, time]) => (
                 <React.Fragment key={day}>
                   <dt>
